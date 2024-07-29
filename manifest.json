@@ -1,0 +1,25 @@
+{
+	"manifest_version": 3,
+	"name": "AniList Magnet",
+	"description": "Find Magnet URI's for AniList",
+	"version": "1.0",
+	"action": {
+    	"default_popup": "src/index.html"
+	},
+	"icons": {
+		"32": "image.png",
+		"48": "image.png"
+	},
+	"content_scripts": [
+		{
+			"css": [ "src/styles.css" ],
+			"js": [ "src/script.js" ],
+			"matches": [ "https://anilist.co/anime/*" ]
+		}
+	],	
+	"permissions": [
+		"activeTab",
+		"scripting",
+		"downloads"
+	]
+}
